@@ -1,9 +1,9 @@
 name: Crypto Trading Bot Execution
 
 on:
-  workflow_dispatch: # ম্যানুয়ালি রান করার জন্য
+  workflow_dispatch:
   schedule:
-    - cron: '*/15 * * * *' # প্রতি ১৫ মিনিট পর পর অটো রান হবে
+    - cron: '*/15 * * * *'
 
 jobs:
   run-bot:
@@ -21,7 +21,7 @@ jobs:
     - name: Install Dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install requests pandas numpy ta python-binance joblib
+        pip install requests pandas numpy ta python-binance joblib yfinance
 
     - name: Run Trading Bot
       env:
