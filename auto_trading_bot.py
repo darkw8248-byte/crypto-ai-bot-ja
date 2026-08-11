@@ -25,6 +25,7 @@ BINANCE_SECRET_KEY = "uczEZhc7RpzGp7cIarmxbVyGlVUnrzNaBXsWqVaaoNos3shjDTSaHjGrQR
 
 # বাইনান্স টেস্টনেট ক্লায়েন্ট সেটআপ
 client = Client(BINANCE_API_KEY, BINANCE_SECRET_KEY, testnet=True)
+client.FUTURES_URL = 'https://testnet.binancefuture.com/fapi'
 
 def send_telegram_message(message):
     url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
